@@ -62,3 +62,9 @@ body{
 #content div a{
     text-decoration: none;
 }
+
+#up{
+    position: absolute;
+    left:50%;
+    margin-left:-100px;
+}
