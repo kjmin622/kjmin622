@@ -2,34 +2,52 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url("../src/image/background.jpg");
+    background-repeat:no-repeat;
+}
+
 #profile{
-    width: 600px;
-    height: 300px;
+    width: 830px;
+    height: 430px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-215px;
+    margin-left:-415px;
+    padding: 15px;
     overflow: hidden;
     display: flex;
+    background-color: rgba(255,255,255,0.5);
     flex-direction: row;
 }
 
 #photo{
-    margin-right: 30px;
+    margin-right: 20px;
 }
 #content{
-    width:300px;
+    width:380px;
     font-family: 'Baloo Thambi 2', cursive;
-    line-height:34px;
+    line-height:47px;
+    padding-right:20px;
 }
-h1{
-    line-height:10px;
+#content h1{
+    font-size:48px;
+    line-height:24px;
 }
 #school_name{
     line-height:0px;
-    font-size:15px;
-    margin-bottom:20px;
+    font-size:20px;
+    text-indent: 24px;
+    padding-right:10px;
 }
 #content div h2{
     display:inline;
-    margin-right:7px;
+    margin-right:12px;
+    font-size: 31px;
 }
 #content div h3{
+    color: black;
+    font-size: 23px;
     display:inline;
 }
