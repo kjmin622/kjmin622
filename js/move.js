@@ -9,48 +9,103 @@ var left = document.getElementById("left");
 var right = document.getElementById("right");
 var down = document.getElementById("down");
 
-up.onmouseover = function(){
+var center = document.getElementById("profile");
+var north = document.getElementById("north");
+var east = document.getElementById("east");
+var west = document.getElementById("west");
+
+var c_left = 50;
+var c_top = 50;
+up.onclick = function(){
     if(!b_up) return;
     b_up=b_left=b_right=false;
     b_down=true;
     now=1;
+    move = setInterval(function(){
+        c_top+=1;
+        center.style.top = c_top+'%';
+        north.style.top = -100+c_top+'%';
+        if(c_top==150){
+            clearInterval(move);
+        }
+    },1);
     visiable();
 }
 
-down.onmouseover = function(){
+down.onclick = function(){
     if(!b_down) return;
     b_up=b_left=b_right=true;
     b_down=false;
     now=0;
+    move = setInterval(function(){
+        c_top-=1;
+        center.style.top = c_top+'%';
+        north.style.top = -100+c_top+'%';
+        if(c_top==50){
+            clearInterval(move);
+        }
+    },1);
     visiable();
 }
 
-left.onmouseover = function(){
+left.onclick = function(){
     if(now==0){
         b_up=b_left=b_down=false;
         b_right=true;
         now=2;
+        move = setInterval(function(){
+            c_left+=1;
+            center.style.left = c_left+'%';
+            west.style.left = -100+c_left+'%';
+            if(c_left==150){
+                clearInterval(move);
+            }
+        },1);
         visiable();
     }
     else if(now==3){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
+        move = setInterval(function(){
+            c_left+=1;
+            center.style.left = c_left+'%';
+            east.style.left = 150+c_left+'%';
+            if(c_left==50){
+                clearInterval(move);
+            }
+        },1);
         visiable();
     }
 }
 
-right.onmouseover = function(){
+right.onclick = function(){
     if(now==0){
         b_up=b_right=b_down=false;
         b_left=true;
         now=3;
+        move = setInterval(function(){
+            c_left-=1;
+            center.style.left = c_left+'%';
+            east.style.left = 150+c_left+'%';
+            if(c_left==-100){
+                clearInterval(move);
+            }
+        },1);
         visiable();
     }
     else if(now==2){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
+        move = setInterval(function(){
+            c_left-=1;
+            center.style.left = c_left+'%';
+            west.style.left = -100+c_left+'%';
+            if(c_left==50){
+                clearInterval(move);
+            }
+        },1);
         visiable();
     }
 }

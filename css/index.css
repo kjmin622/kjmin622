@@ -5,6 +5,7 @@
 body{
     background-color: black;
     background-image: url("../src/image/background.jpg");
+    overflow: hidden;
 }
 
 #profile{
@@ -63,8 +64,40 @@ body{
     text-decoration: none;
 }
 
-#up{
-    position: absolute;
+
+
+#north{
+    width:830px;
+    height:430px;
+    position:absolute;
+    top:-100%;
     left:50%;
-    margin-left:-100px;
+    margin-top:-215px;
+    margin-left:-415px;
+    padding:15px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#west{
+    width:830px;
+    height:430px;
+    position:absolute;
+    top:50%;
+    left:-100%;
+    margin-top:-215px;
+    margin-left:-415px;
+    padding:15px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#east{
+    width:830px;
+    height:430px;
+    position:absolute;
+    top:50%;
+    left:150%;
+    margin-top:-215px;
+    margin-left:-415px;
+    padding:15px;
+    background-color: rgba(255,255,255,0.5);
 }
