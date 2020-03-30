@@ -3,6 +3,7 @@
 }
 
 body{
+    background-color: black;
     background-image: url("../src/image/background.jpg");
     background-repeat:no-repeat;
 }
@@ -38,16 +39,27 @@ body{
 #school_name{
     line-height:0px;
     font-size:20px;
+    color: rgb(50,50,50);
     text-indent: 24px;
     padding-right:10px;
 }
+
 #content div h2{
     display:inline;
     margin-right:12px;
     font-size: 31px;
 }
-#content div h3{
+#content div a h3{
     color: black;
     font-size: 23px;
     display:inline;
+}
+
+#content div a h3:hover{
+    color: #D63E02;
+    font-size: 28px;
+}
+
+#content div a{
+    text-decoration: none;
 }
