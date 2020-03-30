@@ -23,9 +23,9 @@ up.onclick = function(){
     now=1;
     move = setInterval(function(){
         c_top+=1;
-        center.style.top = c_top+'%';
-        north.style.top = -100+c_top+'%';
+        Fmove()
         if(c_top==150){
+            center.style.visibility="hidden";
             clearInterval(move);
         }
     },1);
@@ -39,9 +39,9 @@ down.onclick = function(){
     now=0;
     move = setInterval(function(){
         c_top-=1;
-        center.style.top = c_top+'%';
-        north.style.top = -100+c_top+'%';
+        Fmove()
         if(c_top==50){
+            north.style.visibility="hidden";
             clearInterval(move);
         }
     },1);
@@ -55,9 +55,9 @@ left.onclick = function(){
         now=2;
         move = setInterval(function(){
             c_left+=1;
-            center.style.left = c_left+'%';
-            west.style.left = -100+c_left+'%';
+            Fmove()
             if(c_left==150){
+                center.style.visibility="hidden";
                 clearInterval(move);
             }
         },1);
@@ -69,9 +69,9 @@ left.onclick = function(){
         now=0;
         move = setInterval(function(){
             c_left+=1;
-            center.style.left = c_left+'%';
-            east.style.left = 150+c_left+'%';
+            Fmove()
             if(c_left==50){
+                east.style.visibility="hidden";
                 clearInterval(move);
             }
         },1);
@@ -86,9 +86,9 @@ right.onclick = function(){
         now=3;
         move = setInterval(function(){
             c_left-=1;
-            center.style.left = c_left+'%';
-            east.style.left = 150+c_left+'%';
-            if(c_left==-100){
+            Fmove()
+            if(c_left==-50){
+                center.style.visibility="hidden";
                 clearInterval(move);
             }
         },1);
@@ -100,14 +100,25 @@ right.onclick = function(){
         now=0;
         move = setInterval(function(){
             c_left-=1;
-            center.style.left = c_left+'%';
-            west.style.left = -100+c_left+'%';
+            Fmove()
             if(c_left==50){
+                west.style.visibility="hidden";
                 clearInterval(move);
             }
         },1);
         visiable();
     }
+}
+
+function Fmove(){
+    center.style.left = c_left+'%';
+    center.style.top = c_top+'%';
+    west.style.left = -100+c_left+'%';
+    west.style.top = c_top+'%';
+    east.style.left = 100+c_left+'%';
+    east.style.top = c_top+'%';
+    north.style.left = c_left+'%';
+    north.style.top = -100+c_top+'%';
 }
 
 function visiable(){
@@ -119,4 +130,22 @@ function visiable(){
     else left.style.visibility = "hidden";
     if(b_right) right.style.visibility = "visible";
     else right.style.visibility = "hidden";
+
+    
+    center.style.visibility = "visible";
+    if(now==1){
+        north.style.visibility = "visible";
+        west.style.visibility = "hidden";
+        east.style.visibility = "hidden";
+    }
+    if(now==2){
+        north.style.visibility = "hidden";
+        west.style.visibility = "visible";
+        east.style.visibility = "hidden";
+    }
+    if(now==3){
+        north.style.visibility = "hidden";
+        west.style.visibility = "hidden";
+        east.style.visibility = "visible";
+    }
 }
