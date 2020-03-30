@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+#profile{
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+#photo{
+    margin-right: 30px;
+}
+#content{
+    width:300px;
+    font-family: 'Baloo Thambi 2', cursive;
+    line-height:34px;
+}
+h1{
+    line-height:10px;
+}
+#school_name{
+    line-height:0px;
+    font-size:15px;
+    margin-bottom:20px;
+}
+#content div h2{
+    display:inline;
+    margin-right:7px;
+}
+#content div h3{
+    display:inline;
+}
