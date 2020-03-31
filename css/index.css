@@ -13,6 +13,7 @@ body{
     overflow: hidden;
 }
 
+#waring{visibility: hidden;}
 #profile{
     width: 830px;
     height: 430px;

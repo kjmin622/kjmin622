@@ -1,0 +1,44 @@
+#left img{
+    visibility: hidden;
+}
+#right img{
+    visibility: hidden;
+}
+
+#left{
+    position:absolute;
+    width:45px;
+    height:430px;
+    left:50%;
+    top:50%;
+    margin-top:-215px;
+    margin-left:-460px;
+    background-color: rgba(255,255,255,0.54);
+}
+#left:hover{
+    cursor: url(../src/image/cursor2.png), auto;
+    animation-duration: 2s;
+    animation-name: COR;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#right{
+    position:absolute;
+    width:45px;
+    height:430px;
+    left:50%;
+    top:50%;
+    margin-top:-215px;
+    margin-left:415px;
+    background-color: rgba(255,255,255,0.54);
+}
+#right:hover{
+    cursor: url(../src/image/cursor2.png), auto;
+    animation-duration: 2s;
+    animation-name: COR;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes COR {from{background-color: rgba(255,255,255,0.54);} to{background-color: rgba(255, 226, 244, 0.54)}}

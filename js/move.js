@@ -19,13 +19,14 @@ left.onclick = function(){
         b_up=b_left=b_down=false;
         b_right=true;
         now=2;
-        visiable();
+        visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left+=1;
             Fmove()
             if(c_left==150){
                 now=2;
+                visiable(1);
                 center.style.visibility="hidden";
                 clearInterval(move);
             }
@@ -35,13 +36,14 @@ left.onclick = function(){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
-        visiable();
+        visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left+=1;
             Fmove()
             if(c_left==50){
                 now=0;
+                visiable(1);
                 east.style.visibility="hidden";
                 clearInterval(move);
             }
@@ -54,13 +56,14 @@ right.onclick = function(){
         b_up=b_right=b_down=false;
         b_left=true;
         now=3;
-        visiable();
+        visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left-=1;
             Fmove()
             if(c_left==-50){
                 now=3;
+                visiable(1);
                 center.style.visibility="hidden";
                 clearInterval(move);
             }
@@ -71,13 +74,14 @@ right.onclick = function(){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
-        visiable();
+        visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left-=1;
             Fmove()
             if(c_left==50){
                 now=0;
+                visiable(1);
                 west.style.visibility="hidden";
                 clearInterval(move);
             }
@@ -94,11 +98,17 @@ function Fmove(){
     east.style.top = c_top+'%';
 }
 
-function visiable(){
-    if(b_left) left.style.visibility = "visible";
-    else left.style.visibility = "hidden";
-    if(b_right) right.style.visibility = "visible";
-    else right.style.visibility = "hidden";
+function visiable(x){
+    if(x==0 && window.matchMedia("screen and (max-width:1280px)")){
+        left.style.visibility="hidden";
+        right.style.visibility="hidden";
+    }
+    else{
+        if(b_left) left.style.visibility = "visible";
+        else left.style.visibility = "hidden";
+        if(b_right) right.style.visibility = "visible";
+        else right.style.visibility = "hidden";
+    }
 
     
     center.style.visibility = "visible";
