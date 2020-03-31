@@ -3,6 +3,10 @@
     font-family: 'Baloo Thambi 2', cursive;
 }
 
+html{
+    cursor: url(../src/image/cursor.png), auto;
+}
+
 body{
     background-color: black;
     background-image: url("../src/image/background.jpg");

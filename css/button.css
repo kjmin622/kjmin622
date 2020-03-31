@@ -6,6 +6,7 @@
     margin-top:-100px;
 }
 #left:hover{
+    cursor: url(../src/image/cursor2.png), auto;
     animation-duration: 0.4s;
     animation-name: LRR;
     animation-iteration-count: infinite;
@@ -20,6 +21,7 @@
     margin-top:-100px;
 }
 #right:hover{
+    cursor: url(../src/image/cursor2.png), auto;
     animation-duration: 0.4s;
     animation-name: RLL;
     animation-iteration-count: infinite;
