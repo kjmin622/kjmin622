@@ -83,13 +83,31 @@ body{
     visibility: hidden;
 }
 
-#west div h2{
-    display:inline;
+#west h1{
+    margin:0px;
+    font-size:42px;
 }
-#west div h3{
+#west div div h2{
     display:inline;
+    margin-right:10px;
+    font-size:25px;
+}
+#west div div h3{
+    display:inline;
+    margin-right:10px;
+    font-size:22px;
+}
+#west div div h4{
+    display:inline;
+    font-size:18px;
+    
 }
 
+#west div div{
+    position: relative;
+    left:9%;
+    margin-top:20px;
+}
 #east{
     width:830px;
     height:430px;
