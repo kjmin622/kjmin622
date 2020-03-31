@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 body{
@@ -28,7 +29,6 @@ body{
 }
 #content{
     width:380px;
-    font-family: 'Baloo Thambi 2', cursive;
     line-height:47px;
     padding-right:20px;
 }
@@ -65,20 +65,6 @@ body{
 }
 
 
-
-#north{
-    width:830px;
-    height:430px;
-    position:absolute;
-    top:-100%;
-    left:50%;
-    margin-top:-215px;
-    margin-left:-415px;
-    padding:15px;
-    background-color: rgba(255,255,255,0.5);
-    visibility: hidden;
-}
-
 #west{
     width:830px;
     height:430px;
@@ -90,6 +76,13 @@ body{
     padding:15px;
     background-color: rgba(255,255,255,0.5);
     visibility: hidden;
+}
+
+#west div h2{
+    display:inline;
+}
+#west div h3{
+    display:inline;
 }
 
 #east{
