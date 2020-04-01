@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    font-family: 'Baloo Thambi 2', cursive;
 }
 html{
     cursor: url(../src/image/cursor.png), auto;
@@ -8,6 +7,7 @@ html{
 body{
     background-color: black;
     background-image: url("../src/image/background.jpg");
+    font-family: 'Baloo Thambi 2', cursive;
 }
 #content{
     width:86%;
@@ -96,23 +96,23 @@ body{
 }
 #west h1{
     margin-top:20px;
-    margin-bottom: -10px;
+    margin-bottom: -18px;
     font-size:32px;
 }
 
 #west div div h2{
     margin: 0px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 #west div div h3{
     font-size:14px;
     margin: 0px;
-    margin-top:-3px;
+    margin-top:5px;
 }
 #west div div h4{
     margin: 0px;
-    margin-top:0px;
     font-size:12px;
+    margin-top:3px;
 }
 
 #content div a{
