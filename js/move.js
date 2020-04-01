@@ -124,7 +124,7 @@ function visiable_dir(x){
     }
 }
 
-var screen_wid = window.matchMedia("screen and (max-width:840px)");
+var screen_wid = window.matchMedia("screen and (max-width:600px)");
 screen_wid.addListener(function(e){
     if(e.matches){
         left.style.visibility = "hidden";
