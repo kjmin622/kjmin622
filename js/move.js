@@ -18,21 +18,21 @@ left.onclick = function(){
     if(now==0){
         b_up=b_left=b_down=false;
         b_right=true;
-        now=2;
+        now=1;
         visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left+=1;
             Fmove()
             if(c_left==150){
-                now=2;
+                now=1;
                 visiable(1);
                 center.style.visibility="hidden";
                 clearInterval(move);
             }
         },1);
     }
-    else if(now==3){
+    else if(now==2){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
@@ -55,14 +55,14 @@ right.onclick = function(){
     if(now==0){
         b_up=b_right=b_down=false;
         b_left=true;
-        now=3;
+        now=2;
         visiable(0);
         now=-1;
         move = setInterval(function(){
             c_left-=1;
             Fmove()
             if(c_left==-50){
-                now=3;
+                now=2;
                 visiable(1);
                 center.style.visibility="hidden";
                 clearInterval(move);
@@ -70,7 +70,7 @@ right.onclick = function(){
         },1);
         
     }
-    else if(now==2){
+    else if(now==1){
         b_up=b_left=b_right=true;
         b_down=false;
         now=0;
@@ -99,6 +99,19 @@ function Fmove(){
 }
 
 function visiable(x){
+    visiable_dir(x);
+    center.style.visibility = "visible";
+    if(now==1){
+        west.style.visibility = "visible";
+        east.style.visibility = "hidden";
+    }
+    if(now==2){
+        west.style.visibility = "hidden";
+        east.style.visibility = "visible";
+    }
+}
+
+function visiable_dir(x){
     if(x==0 && window.matchMedia("screen and (max-width:1280px)")){
         left.style.visibility="hidden";
         right.style.visibility="hidden";
@@ -109,15 +122,48 @@ function visiable(x){
         if(b_right) right.style.visibility = "visible";
         else right.style.visibility = "hidden";
     }
+}
 
-    
-    center.style.visibility = "visible";
-    if(now==2){
+var screen_wid = window.matchMedia("screen and (max-width:840px)");
+screen_wid.addListener(function(e){
+    if(e.matches){
+        left.style.visibility = "hidden";
+        right.style.visibility = "hidden";
+        center.style.visibility = "visble";
         west.style.visibility = "visible";
         east.style.visibility = "hidden";
+        center.style.left = "50%";
+        center.style.top = "20px";
+        west.style.left = "50%";
+        west.style.top = "410px";
+
     }
-    if(now==3){
-        west.style.visibility = "hidden";
-        east.style.visibility = "visible";
+    else{
+        visiable(1);
+        if(now==0){
+            center.style.left = "50%";
+            center.style.top = "50%";
+            west.style.left = "-100%";
+            west.style.top = "50%";
+            east.style.left = "150%";
+            east.style.top = "50%";
+        }
+        if(now==1){
+            center.style.left = "200%";
+            center.style.top = "50%";
+            west.style.left = "50%";
+            west.style.top = "50%";
+            east.style.left = "300%";
+            east.style.top = "50%";
+        }
+        if(now==2){
+            center.style.left = "-50%";
+            center.style.top = "50%";
+            west.style.left = "-200%";
+            west.style.top = "50%";
+            east.style.left = "50%";
+            east.style.top = "50%";
+        }
+        
     }
-}
+});
