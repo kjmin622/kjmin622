@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    font-family: 'Baloo Thambi 2', cursive;
 }
 
 html{
@@ -11,28 +10,29 @@ body{
     background-color: black;
     background-image: url("../src/image/background.jpg");
     overflow: hidden;
+    font-family: 'Baloo Thambi 2', cursive;
 }
 
 #profile{
-    width: 510px;
-    height: 430px;
+    box-sizing: content-box;
     position:absolute;
     top:50%;
     left:50%;
-    margin-top:-215px;
-    margin-left:-415px;
-    padding: 15px;
+    transform:translate(-50%,-50%) scale(0.6);
+    padding: 30px 30px 20px 30px;
     overflow: hidden;
     display: flex;
     background-color: rgba(255,255,255,0.5);
     flex-direction: row;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
 }
 
 #photo{
     margin-right: 20px;
 }
 #content{
-    width:380px;
+    width: 400px;
     line-height:47px;
     padding-right:20px;
 }
@@ -47,7 +47,6 @@ body{
     text-indent: 24px;
     padding-right:10px;
 }
-
 #content div h2{
     display:inline;
     margin-right:12px;
@@ -57,6 +56,7 @@ body{
     color: black;
     font-size: 23px;
     display:inline;
+    transition: all 0.3s;
 }
 
 #content div a h3:hover{
@@ -70,21 +70,29 @@ body{
 
 
 #west{
-    width:830px;
-    height:430px;
     position:absolute;
     top:50%;
     left:-100%;
-    margin-top:-215px;
-    margin-left:-415px;
-    padding:15px;
+    transform:translate(-50%,-50%) scale(0.7);
+    padding:30px 30px 20px 30px;
     background-color: rgba(255,255,255,0.5);
     visibility: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 10px;
 }
 
 #west h1{
     margin:0px;
     font-size:42px;
+}
+
+.nanum{
+    font-family: 'Nanum Gothic', sans-serif;
+    width:650px;
+    height:250px;
+}
+#west div div{
+    margin-top: 20px;
 }
 #west div div h2{
     display:inline;
@@ -100,12 +108,6 @@ body{
     display:inline;
     font-size:18px;
     
-}
-
-#west div div{
-    position: relative;
-    left:9%;
-    margin-top:20px;
 }
 #east{
     width:830px;

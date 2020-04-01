@@ -112,6 +112,7 @@ function visiable(x){
 }
 
 function visiable_dir(x){
+    
     if(x==0 && window.matchMedia("screen and (max-width:1280px)")){
         left.style.visibility="hidden";
         right.style.visibility="hidden";

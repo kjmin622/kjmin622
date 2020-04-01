@@ -1,7 +1,25 @@
-
+.error{
+    visibility: visible;
+    width:100px;
+    height:100%;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
 #left{
     position:absolute;
-    left:10%;
+    width:50%;
+    height:100%;
+}
+#right{
+    position:absolute;
+    width:50%;
+    height:100%;
+    right:0px;
+}
+#left img{
+    position:absolute;
+    left:20%;
     top:50%;
     margin-top:-100px;
 }
@@ -12,11 +30,11 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-@keyframes LRR {from{left:10%;} to{left:8%;}}
+@keyframes LRR {from{left:0px;} to{left:-50px;}}
 
-#right{
+#right img{
     position:absolute;
-    right:10%;
+    right:20%;
     top:50%;
     margin-top:-100px;
 }
@@ -27,4 +45,4 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-@keyframes RLL {from{right:10%;} to{right:8%;}}
+@keyframes RLL {from{right:0px;} to{right:-50px;}}
