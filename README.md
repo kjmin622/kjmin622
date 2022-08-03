@@ -1,6 +1,7 @@
+<div align="center">
+
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=welcome&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Jeongmin's%20GitHub%20Profile&descAlignY=51&descAlign=62) 
 
-<div align="center">
 
 ### 😊 Hi there 😊
 ![Anurag's GitHub stats](https://github-readme-stats-sand-six-91.vercel.app/api?username=kjmin622&show_icons=true&count_private=true&line_height=24&theme=dracula&hide=stars)
