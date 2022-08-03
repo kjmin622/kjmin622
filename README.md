@@ -2,11 +2,11 @@
 
 ### 😊 Hi there 😊
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kjmin622?count_private=true?theme=dracula)](https://github.com/anuraghazra/github-readme-stats)
+![Anurag's GitHub stats](https://github-readme-stats-sand-six-91.vercel.app/api?username=kjmin622&show_icons=true&count_private=true&line_height=24&theme=dracula&hide=stars)
 <br>
 <br>
 <br>
-### 🔨 Stack 🔧
+### 🔨 Tech Stack 🔧
 used at least once
 
 <a href="" target="_blank"><img src="https://img.shields.io/badge/C++-A8B9CC?style=flat-square&logo=Cplusplus&logoColor=white"/></a>
