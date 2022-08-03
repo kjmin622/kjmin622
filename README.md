@@ -1,6 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=welcome&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Jeongmin's%20GitHub%20Profile&descAlignY=51&descAlign=62) 
 
-<center>
+<div align="center">
 
 ### 😊 Hi there 😊
 ![Anurag's GitHub stats](https://github-readme-stats-sand-six-91.vercel.app/api?username=kjmin622&show_icons=true&count_private=true&line_height=24&theme=dracula&hide=stars)
@@ -35,4 +35,4 @@ used at least once
 <a href="https://www.instagram.com/jm.road/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=Instagram&logoColor=white"/></a>
 
 
-</center>
+</div>
